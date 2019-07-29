@@ -16,7 +16,7 @@
 // }
 
 function flatten(arr) {
-debugger
+
     const flatArr;
     arr.forEach(value => {
         if(Array.isArray(value)) {
