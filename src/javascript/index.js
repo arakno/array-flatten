@@ -1,33 +1,20 @@
 // import '../sass/styles.scss';
 
-// function flatten(arr, depth) {
-//     if(!depth) {
-//         return arr.slice();
-//     }
-//     const flatArr = [];
-//     arr.forEach(value => {
-//         if(Array.isArray(value)) {
-//             Array.prototype.concat.apply(flatArr, value);
-//             flatArr.push(...flatten(value, depth - 1));
-//         } else {
-//             flatArr.push(value);
-//         }
-//     });
-// }
-
+/**
+ * 
+ * @param {Array} arr
+ * @description Flattens an array recursively 
+ */
 function flatten(arr) {
-
-    const flatArr;
-    arr.forEach(value => {
-        if(Array.isArray(value)) {
-            Array.prototype.concat.apply(flatArr, value);
+    const flatArr = [];
+    for (let a of arr) {
+        if (Array.isArray(a)) {
+            flatten(a);
         } else {
-            flatArr.push(value);
+            flatArr.push(a);
         }
-    });
+    }
+    console.log(flatArr);
 
     return flatArr;
 }
-
-let initial = [[0, 1], [2, 3], [4, [5, 6, 7]]];
-flatten(initial);
