@@ -15,6 +15,7 @@ function flatten(arr) {
         }
     }
     console.log(flatArr);
-
     return flatArr;
 }
+
+export default flatten;

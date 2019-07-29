@@ -90,22 +90,10 @@
 /*!*********************************!*\
   !*** ./src/javascript/index.js ***!
   \*********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log('Webpack Boilerplate');\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
-
-/***/ }),
-
-/***/ "./src/sass/styles.scss":
-/*!******************************!*\
-  !*** ./src/sass/styles.scss ***!
-  \******************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/styles.scss?");
+eval("// import '../sass/styles.scss';\n\n/**\r\n * \r\n * @param {Array} arr\r\n * @description Flattens an array recursively \r\n */\nfunction flatten(arr) {\n  var flatArr = [];\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = arr[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var a = _step.value;\n\n      if (Array.isArray(a)) {\n        flatten(a);\n      } else {\n        flatArr.push(a);\n      }\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator.return != null) {\n        _iterator.return();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return flatArr;\n}\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
 
 /***/ })
 
