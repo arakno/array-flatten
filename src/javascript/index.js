@@ -1,9 +1,9 @@
 // import '../sass/styles.scss';
 
 /**
- * 
- * @param {Array} arr
  * @description Flattens an array recursively 
+ * @param {Array} arr Array of numbers.
+ * @return {Array} The flattened array.
  */
 function flatten(arr) {
     const flatArr = [];
