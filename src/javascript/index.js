@@ -1,5 +1,3 @@
-// import '../sass/styles.scss';
-
 /**
  * @description Flattens an array recursively 
  * @param {Array} arr Array of numbers.
@@ -10,14 +8,13 @@ function flatten(arr) {
     let flatArr = [];
     for (let a of arr) {
         if (Array.isArray(a)) {
-            // flatArr.push(flatten(a));
-             Array.prototype.concat.apply(flatArr, flatten(a));
+            flatArr = flatArr.concat(flatten(a));
         } else {
             flatArr.push(a);
         }
     }
-    console.log(flatArr);
     return flatArr;
 }
 
-export default flatten;
+// export default flatten;
+module.exports = flatten;
