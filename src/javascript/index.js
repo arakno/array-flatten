@@ -11,7 +11,7 @@ function flatten(arr) {
     for (let a of arr) {
         if (Array.isArray(a)) {
             // flatArr.push(flatten(a));
-            flatArr = flatArr.concat(flatten(a));
+             Array.prototype.concat.apply(flatArr, flatten(a));
         } else {
             flatArr.push(a);
         }
