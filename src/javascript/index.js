@@ -16,5 +16,4 @@ function flatten(arr) {
     return flatArr;
 }
 
-// export default flatten;
-module.exports = flatten;
+export default flatten;
