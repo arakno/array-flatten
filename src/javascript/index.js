@@ -6,10 +6,12 @@
  * @return {Array} The flattened array.
  */
 function flatten(arr) {
-    const flatArr = [];
+    if (!arr.length) return [];
+    let flatArr = [];
     for (let a of arr) {
         if (Array.isArray(a)) {
-            flatten(a);
+            // flatArr.push(flatten(a));
+            flatArr = flatArr.concat(flatten(a));
         } else {
             flatArr.push(a);
         }
