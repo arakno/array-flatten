@@ -21,6 +21,3 @@ Run tests
 ```
 $ npm test
 ```
-
-Done! Open index.html in browser for a cat image.
-
